@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>传统文化</title>
+  <link rel="stylesheet" href="./index.css">
+  <style>
+    /* 页面主体图片样式 */
+  .main-img {
+      width: 800px;
+      margin: auto;
+      height: 600px;
+      background-color: red;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* 放置所有牌的容器样式 */
+    #poker {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      margin: 50px auto;
+    }
+
+    /* 单个牌的容器样式（main-box） */
+  .main-box {
+      width: 120px;
+      height: 180px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      margin: 10px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    /* 鼠标悬停在牌上时的样式变化，添加一点交互效果 */
+  .main-box:hover {
+      transform: translateY(-5px);
+    }
+
+    /* 牌正面（box-1）的样式 */
+  .box-1 {
+      width: 100%;
+      height: 100%;
+      background-color: #ffb2b2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      color: #555;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.3s ease;
+    }
+
+    /* 牌正面（box-1）鼠标悬停时的背景色变化，增强交互感 */
+  .box-1:hover {
+      background-color: #ccc;
+    }
+
+    /* 牌反面（box-2）的样式 */
+  .box-2 {
+      width: 100%;
+      height: 100%;
+      background-color: #f9c74f;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      color: #333;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.3s ease;
+    }
+
+    /* 牌反面（box-2）鼠标悬停时的背景色变化 */
+  .box-2:hover {
+      background-color: #f7b733;
+    }
+
+    /* 定义换牌时向上移出的动画类名及样式 */
+  .move-up-out {
+        transform: translateY(-180px); /* 根据牌的高度适当调整向上移出的距离，使其完全移出可视范围 */
+        transition: transform 0.4s ease-in-out;
+    }
+
+    /* 定义换牌时从下方移入的动画类名及样式 */
+  .move-down-in {
+        transform: translateY(180px); /* 从下方移入，超出可视范围一点，可调整数值，这里和牌高度一致 */
+        transition: transform 0.4s ease-in-out;
+    }
+
+    /* 定义换牌结束后元素正常显示的最终位置类名及样式 */
+  .move-ended {
+        transform: translateY(0);
+    }
+  #button{
+    line-height: 50px;
+    margin: auto;
+    width: 70px;
+    height: 50px;
+    margin-bottom: 200px;
+    display: flex;
+  }
+  </style>
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="./index.html">首页</a></li>
+      <li class="has-submenu">
+        <a href="./2/index.html"><span class="style-p">./</span>四大发明<span class="style-p">\.</span></a>
+        <ul class="submenu" style="left: 100px;">
+          <li><a href="./2/index.html?name=1"><img src="./img/四大发明1.png" >火药</a></li>
+          <li><a href="./2/index.html?name=2"><img src="./img/四大发明2.png" >造纸术</a></li>
+          <li><a href="./2/index.html?name=3"><img src="./img/四大发明3.png" >指南针</a></li>
+          <li><a href="./2/index.html?name=4"><img src="./img/四大发明4.png" >印刷术</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="./1/index.html"><span class="style-p">~%~</span>十二生肖<span class="style-p">~%~</span></a>
+        <ul class="submenu">
+          <li><a href="./1/index.html?name=1"><img src="./img/十二生肖 (1).png" >子鼠</a></li>
+          <li><a href="./1/index.html?name=2"><img src="./img/十二生肖 (2).png" >丑牛</a></li>
+          <li><a href="./1/index.html?name=3"><img src="./img/十二生肖 (3).png" >寅虎</a></li>
+          <li><a href="./1/index.html?name=4"><img src="./img/十二生肖 (4).png" >卯兔</a></li>
+          <li><a href="./1/index.html?name=5"><img src="./img/十二生肖 (5).png" >辰龙</a></li>
+          <li><a href="./1/index.html?name=6"><img src="./img/十二生肖 (6).png" >巳蛇</a></li>
+          <li><a href="./1/index.html?name=7"><img src="./img/十二生肖 (7).png" >午马</a></li>
+          <li><a href="./1/index.html?name=8"><img src="./img/十二生肖 (8).png" >未羊</a></li>
+          <li><a href="./1/index.html?name=9"><img src="./img/十二生肖 (9).png" >申猴</a></li>
+          <li><a href="./1/index.html?name=10"><img src="./img/十二生肖 (10).png" >酉鸡</a></li>
+          <li><a href="./1/index.html?name=11"><img src="./img/十二生肖 (11).png" >戌狗</a></li>
+          <li><a href="./1/index.html?name=12"><img src="./img/十二生肖 (12).png" >亥猪</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="./3/index.html"><span class="style-p"><</span>思想哲学<span class="style-p">></span></a>
+        <ul class="submenu">
+          <li><a href="./3/index.html?name=1"><img src="./img/孔子.jpg" width="50px" height="70px">儒家思想</a></li>
+          <li><a href="./3/index.html?name=2"><img src="./img/老子.jpg" width="50px" height="70px">道家思想</a></li>
+          <li><a href="./3/index.html?name=3"><img src="./img/墨子.jpg" width="50px" height="70px">墨家思想</a></li>
+          <li><a href="./3/index.html?name=4"><img src="./img/韩非.jpg" width="50px" height="70px">法家思想</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="./4/index.html"><span class="style-p">~</span>传统节日<span class="style-p">~</span></a>
+        <ul class="submenu">
+          <li><a href="./4/index.html?name=1"><img src="./img/春节.png" >春节</a></li>
+          <li><a href="./4/index.html?name=2"><img src="./img/元宵节.png" >元宵节</a></li>
+          <li><a href="./4/index.html?name=3"><img src="./img/清明节.png" >清明节</a></li>
+          <li><a href="./4/index.html?name=4"><img src="./img/端午节.png" >端午节</a></li>
+          <li><a href="./4/index.html?name=5"><img src="./img/七夕节.png" >七夕节</a></li>
+          <li><a href="./4/index.html?name=6"><img src="./img/中秋节.png" >中秋节</a></li>
+          <li><a href="./4/index.html?name=7"><img src="./img/重阳节.png" >重阳节</a></li>
+          <li><a href="./4/index.html?name=8"><img src="./img/冬至节.png" >冬至节</a></li>
+          <li><a href="./4/index.html?name=9"><img src="./img/腊八节.png" >腊八节</a></li>
+          <li><a href="./4/index.html?name=10"><img src="./img/寒食节.png" >寒食节</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- 内容栏 -->
+  <div class="container">
+    <!-- 轮播图 -->
+    <div id="main-img">
+      <div class="carousel">
+        <div class="carousel-inner">
+          <a href="./1/index.html"><img class="img" src="./img/十二生肖轮播大图.jpg" alt="图片1"></a>
+          <a href="./2/index.html"><img class="img" src="./img/四大发明轮播大图.png" alt="图片2"></a>
+          <a href="./3/index.html"><img class="img" src="./img/思想哲学轮播大图.png" alt="图片3"></a>
+          <a href="./4/index.html"><img class="img" src="./img/传统节日轮播大图.jpg" alt="图片4"></a>
+        </div>
+        <div class="indicators">
+          <div class="indicator" data-index="0"></div>
+          <div class="indicator" data-index="1"></div>
+          <div class="indicator" data-index="2"></div>
+          <div class="indicator" data-index="3"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商品图片展示模块 -->
+    <section id="product-images">
+      <h2>找红牌</h2>
+      <div id="poker">
+        <div class="main-box">
+          <div class="box-1"></div>
+          <div class="box-2" style="display: none;"></div>
+        </div>
+        <div class="main-box">
+          <div class="box-1"></div>
+          <div class="box-2" style="display: none;"></div>
+        </div>
+        <div class="main-box">
+          <div class="box-1"></div>
+          <div class="box-2" style="display: none;"></div>
+        </div>
+        <div class="main-box">
+          <div class="box-1"></div>
+          <div class="box-2" style="display: none;"></div>
+        </div>
+        <div class="main-box">
+          <div class="box-1"></div>
+          <div class="box-2" style="display: none;"></div>
+        </div>
+      </div>
+      <button id="button">游戏开始</button>
+    </section>
+  </div>
+</body>
+<script>
+  let mainImgs;
+  let mainImgContainer;
+  let carousel;
+  let carouselInner;
+  let indicators;
+  let images;
+  let imageWidth;
+  let currentIndex = 0;
+  let intervalId;
+
+  function updateCarouselWidth() {
+    // 轮播图相关逻辑，保持不变，此处省略部分重复代码注释
+    let width = window.innerWidth;
+    let carouselImages = document.querySelectorAll('.carousel-inner img');
+    for (let i = 0; i < carouselImages.length; i++) {
+      carouselImages[i].style.width = width + 'px';
+    }
+    let carousel_1 = document.querySelector('.carousel');
+    if (carousel_1) {
+      carousel_1.style.width = width + 'px';
+    }
+
+    carousel = document.querySelector('.carousel');
+    carouselInner = document.querySelector('.carousel-inner');
+    indicators = document.querySelectorAll('.indicator');
+    images = document.querySelectorAll('.carousel-inner img');
+    imageWidth = carousel.offsetWidth;
+    currentIndex = (currentIndex) % images.length;
+    goToSlide(currentIndex);
+  }
+  updateCarouselWidth();
+
+  // 监听浏览器窗口大小改变事件，保持不变
+  window.addEventListener('resize', updateCarouselWidth);
+
+  // 二级菜单显示隐藏相关逻辑，保持不变，此处省略部分重复代码注释
+  const hasSubmenuItems = document.querySelectorAll('.has-submenu');
+  hasSubmenuItems.forEach(item => {
+    const submenu = item.querySelector('.submenu');
+    // 鼠标进入、离开等事件处理函数
+  });
+
+  // 轮播图初始化、切换、自动播放等功能函数，保持不变，此处省略部分重复代码注释
+  function init() {
+    carouselInner.style.width = `${imageWidth * images.length}px`;
+    images.forEach((img, index) => {
+      img.style.left = `${index * imageWidth}px`;
+    });
+  }
+
+  function goToSlide(index) {
+    carouselInner.style.transform = `translateX(-${index * imageWidth}px)`;
+    currentIndex = index;
+    updateIndicators();
+  }
+
+  function updateIndicators() {
+    indicators.forEach(indicator => {
+      indicator.classList.remove('active');
+    });
+    indicators[currentIndex].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % images.length;
+    goToSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    goToSlide(currentIndex);
+  }
+
+  indicators.forEach(indicator => {
+    indicator.addEventListener('click', function () {
+      const index = parseInt(this.dataset.index);
+      goToSlide(index);
+    });
+  });
+
+  function startAutoPlay() {
+    intervalId = setInterval(nextSlide, 3000);
+  }
+
+  carousel.addEventListener('mouseenter', () => {
+    clearInterval(intervalId);
+  });
+  carousel.addEventListener('mouseleave', () => {
+    startAutoPlay();
+  });
+
+  init();
+  startAutoPlay();
+
+  // 导航栏跟踪功能，保持不变
+  window.addEventListener('scroll', function () {
+    const nav = document.querySelector('.main-nav');
+    if (window.pageYOffset > 0) {
+      nav.style.position = 'fixed';
+      nav.style.top = '0';
+    } else {
+      nav.style.position ='relative';
+    }
+  });
+
+  //开启按钮
+  let button = document.getElementById('button')
+  button.addEventListener('click', game);
+  // 小游戏部分，重点修改这里实现换牌动画效果
+function game() {
+    //关闭按钮
+    button.removeEventListener('click', game);
+
+    let main_box = document.getElementsByClassName('main-box');
+    const swapTimes = 15; // 定义换牌次数为15次
+    let currentSwap = 0; // 记录当前已经换牌的次数
+
+    for(let i=0;i<main_box.length;i++){
+      main_box[i].querySelector('.box-2').style.display = 'none';
+    }
+
+    // 用于获取两个不同的随机索引，确保互换的是不同的牌元素
+    function getTwoDifferentRandomIndices() {
+        let index1, index2;
+        do {
+            index1 = Math.floor(Math.random() * main_box.length);
+            index2 = Math.floor(Math.random() * main_box.length);
+        } while (index1 === index2);
+        return [index1, index2];
+    }
+
+    function performSwap() {
+        if (currentSwap < swapTimes) {
+            // 获取两个不同的牌元素索引
+            let [index1, index2] = getTwoDifferentRandomIndices();
+
+            // 获取对应的两个.main-box元素
+            let box1 = main_box[index1];
+            let box2 = main_box[index2];
+
+            // 给要交换的两个.main-box元素添加相应动画类名，先向上移出
+            box1.classList.remove('move-ended');
+            box2.classList.remove('move-ended');
+            box1.classList.add('move-up-out');
+            box2.classList.add('move-down-in');
+
+            // 通过操作父元素来交换两个.main-box元素的顺序
+            let parent = box1.parentNode;
+            parent.insertBefore(box2, box1);
+            parent.insertBefore(box1, box2.nextSibling);
+
+            // 等待动画过渡时间结束后（这里设置和CSS里过渡时间一致为0.2秒），移除动画类名并添加最终显示位置类名
+            setTimeout(() => {
+                box1.classList.remove('move-up-out');
+                box1.classList.add('move-ended');
+                box2.classList.remove('move-down-in');
+                box2.classList.add('move-ended');
+            }, 300);
+
+            setTimeout(() => {
+                currentSwap++;
+                performSwap(); // 递归调用，继续进行下一次换牌操作
+            }, 500); // 稍微延迟一点，等动画结束、元素位置稳定后再进行下一次换牌，可根据实际情况调整这个延迟时间
+        } else {
+            // 当完成指定次数的换牌后，为每个.main-box元素里的.box-1（牌正面）添加点击事件监听器
+            for (let i = 0; i < main_box.length; i++) {
+                let box_1 = main_box[i].querySelector('.box-1');
+                let box_2 = main_box[i].querySelector('.box-2');
+                box_1.addEventListener('click', function () {
+                    // 判断点击的牌反面是否为红色（这里通过获取计算后的背景色值来判断，避免样式属性获取可能不准确的问题）
+                    const computedStyle = window.getComputedStyle(box_2);
+                    const backgroundColor = computedStyle.backgroundColor;
+                    box_2.style.display = 'flex'
+
+                    //开启游戏开始按钮
+                    button.addEventListener('click', game);
+                    if (backgroundColor === 'rgb(255, 0, 0)' || backgroundColor === 'rgba(255, 0, 0, 1)') {
+                        alert('恭喜你，找到了红色牌，你赢了！');
+                        for(let i=0;i<main_box.length;i++){
+                          main_box[i].querySelector('.box-2').style.display = 'flex'
+                        }
+                        // 可以在这里添加更多胜利后的逻辑，比如重置游戏等
+                    } else {
+                        alert('很遗憾，你点击的不是红色牌，游戏失败了。');
+                        for(let i=0;i<main_box.length;i++){
+                          main_box[i].querySelector('.box-2').style.display = 'flex'
+                        }
+                        // 同样可以添加失败后的相关逻辑，比如提示是否重新开始等
+                    }
+                });
+            }
+        }
+    }
+
+    // 先随机显示某个牌
+    let sum = Math.floor(Math.random() * 3);
+    console.log(sum);
+    main_box[sum].querySelector('.box-2').style.backgroundColor ='red';
+    main_box[sum].querySelector('.box-2').style.display = 'flex';
+    setTimeout(() => {
+        main_box[sum].querySelector('.box-2').style.display = 'none';
+    }, 2000);
+
+    setTimeout(() => {
+        performSwap(); // 开始执行换牌操作
+    }, 3000);
+
+}
+</script>

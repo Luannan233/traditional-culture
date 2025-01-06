@@ -1,0 +1,143 @@
+body{
+  background-color: rgba(187, 178, 178, 0.5);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* 主导航栏样式 */
+.main-nav {
+  top: 0; /* 距离页面顶部的距离为0，使其固定在顶部，可根据实际需求调整 */
+  width: 100%; /* 导航栏宽度占满整个页面宽度，确保覆盖完整 */
+  background-color: #fff; /* 设置背景颜色，可根据整体页面风格调整 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果，使其更有层次感 */
+  z-index: 100; /* 设置较高的层级，确保导航栏在其他元素之上显示 */
+  background-color: #333;
+}
+
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.main-nav li {
+  z-index: 2;
+}
+
+@keyframes main-nav {
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-5px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+.main-nav li:hover {
+  animation: main-nav 0.2s;
+}
+
+.main-nav a:hover{
+  color: red;
+  transition: all 0.3s;
+}
+
+/* 有二级菜单的一级导航项样式 */
+.has-submenu {
+  position: relative;
+}
+
+.style-p{
+  color: rgb(148, 29, 29);
+}
+
+.main-nav .submenu {
+  display: none;
+  position: absolute;
+  top: 30px; /* 适当调整距离一级菜单的垂直距离，可根据实际效果微调 */
+  left: 50%; /* 让二级菜单在水平方向上居中，以一级菜单为参照 */
+  transform: translateX(-50%); /* 通过向左平移自身宽度的一半来实现真正的水平居中 */
+  background-color: #444;
+  width: 520px;
+  flex-direction: row; /* 设置为横向排列（之前你希望横排显示二级标题，已有的设置保留） */
+  flex-wrap: wrap;
+  justify-content: space-around; /* 子元素在水平方向上均匀分布，可根据需求调整布局方式 */
+  padding: 10px; /* 给二级菜单添加一些内边距，让内容看起来更舒适 */
+}
+.main-nav ul li:nth-child(5) .submenu{
+  left: -20%;
+}
+/* 二级菜单默认隐藏（添加此样式） */
+
+.submenu li {
+  padding: 0px 0px 10px 0px;
+  margin: 0px 5px 0px 5px;
+  width: 100px;
+  text-align: center; /* 让二级菜单里的标题文字居中显示，更美观 */
+}
+
+.submenu img {
+  width: 50px;
+  display: block; /* 让图片以块级元素显示，独占一行，便于布局控制 */
+  margin: 0 auto; /* 让图片在其所在的 <li> 元素内水平居中 */
+}
+
+.submenu a {
+  display: block;
+}
+
+/* 容器样式，用于规范各模块布局 */
+.container {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* 轮播图基本样式 */
+.carousel {
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-inner{
+  transition: all 0.5s;
+}
+
+.carousel-inner img {
+  float: left;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}

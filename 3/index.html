@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>思想哲学</title>
+  <link rel="stylesheet" href="../index.css">
+</head>
+<style>
+body{
+  background-color: gray;
+}
+#main{
+  border: 2px solid black;
+  margin: auto;
+  width: 65%;
+  background-color: rgba(216, 205, 205, 0.4);
+}
+@keyframes title{
+  from{
+    transform:rotateX(600deg)  scale(0);
+  }
+  to{
+    
+  }
+}
+#carousel{
+  width: 100%;
+  height: 500px;
+  background-color: rgba(201, 197, 197, 0.7);
+}
+#carousel h1{
+  text-align: center;
+  font-size: 70px;
+  animation: title 2s;
+  width: 370px;
+  height: 500px;
+  line-height: 500px;
+  margin: auto;
+  color: rgb(192, 41, 41);
+}
+#main-div-1{
+  background-color: rgba(113, 170, 170, 0.4);
+  height: 800px;
+  border-bottom: 5px double rgb(0, 0, 0);
+  border-top: 5px double rgb(0, 0, 0);
+}
+#main-div-2{
+  background-color: rgba(97, 26, 26, 0.4);
+  height: 800px;
+  border-bottom: 5px double rgb(0, 0, 0);
+}
+#main-div-3{
+  background-color: rgba(113, 170, 170, 0.4);
+  height: 800px;
+  border-bottom: 5px double rgb(0, 0, 0);
+}
+#main-div-4{
+  background-color: rgba(97, 26, 26, 0.4);
+  height: 800px;
+  border-bottom: 5px double rgb(0, 0, 0);
+}
+#main-div-5{
+  background-color: rgba(113, 170, 170, 0.4);
+  height: 800px;
+  border-bottom: 5px double rgb(0, 0, 0);
+}
+.img-left img,
+.img-right img{
+  width: 250px;
+  height: 350px;
+}
+.img-text-top{
+  text-align: center;
+  width: 250px;
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow:2px 2px 2px red;
+}
+.img-text-bottom{
+  text-align: center;
+  width: 250px;
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow:2px 2px 2px red;
+}
+.img-left{
+  float: left;
+  left: 3%;
+  position: relative;
+  top: 100px;
+}
+.img-right{
+  float: right;
+  right: 3%;
+  position: relative;
+  top: 100px;
+}
+.img-left+.div-text{
+  border-left: 2px solid gray;
+  position: relative;
+  left: 320px;
+  width: 800px;
+  height:800px;
+}
+.img-right+.div-text{
+  border-right: 2px solid gray;
+  position: relative;
+  left: 1px;
+  width: 800px;
+  height:800px;
+}
+.img-right+.div-text table{
+  margin-top: 20px;
+}
+h2{
+  text-align: center;
+  margin: 0 auto;
+  width: 500px;
+}
+.img-left+.div-text table{
+  position: relative;
+  top: -500px;
+}
+table{
+  width: 800px;
+  font-size: 20px;
+}
+tr{
+  height: 90px;
+}
+tr td:nth-child(1){
+  width: 100px;
+}
+#backToTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none; /* 初始先隐藏按钮，当页面滚动一定距离后再显示 */
+}
+</style>
+<body>
+    <!--导航栏-->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">首页</a></li>
+        <li class="has-submenu">
+          <a href="../2/index.html"><span class="style-p">./</span>四大发明<span class="style-p">\.</span></a>
+          <ul class="submenu" style="left:200%;">
+            <!-- 这里可以添加四大发明相关的二级菜单具体内容 -->
+             <li><a href="../2/index.html?name=1"><img src="../img/四大发明1.png" >火药</a></li>
+             <li><a href="../2/index.html?name=2"><img src="../img/四大发明2.png" >造纸术</a></li>
+             <li><a href="../2/index.html?name=3"><img src="../img/四大发明3.png" >指南针</a></li>
+             <li><a href="../2/index.html?name=4"><img src="../img/四大发明4.png" >印刷术</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="../1/index.html"><span class="style-p">~%~</span>十二生肖<span class="style-p">~%~</span></a>
+          <ul class="submenu">
+            <li><a href="../1/index.html?name=1"><img src="../img/十二生肖 (1).png" >子鼠</a></li>
+          <li><a href="../1/index.html?name=2"><img src="../img/十二生肖 (2).png" >丑牛</a></li>
+          <li><a href="../1/index.html?name=3"><img src="../img/十二生肖 (3).png" >寅虎</a></li>
+          <li><a href="../1/index.html?name=4"><img src="../img/十二生肖 (4).png" >卯兔</a></li>
+          <li><a href="../1/index.html?name=5"><img src="../img/十二生肖 (5).png" >辰龙</a></li>
+          <li><a href="../1/index.html?name=6"><img src="../img/十二生肖 (6).png" >巳蛇</a></li>
+          <li><a href="../1/index.html?name=7"><img src="../img/十二生肖 (7).png" >午马</a></li>
+          <li><a href="../1/index.html?name=8"><img src="../img/十二生肖 (8).png" >未羊</a></li>
+          <li><a href="../1/index.html?name=9"><img src="../img/十二生肖 (9).png" >申猴</a></li>
+          <li><a href="../1/index.html?name=10"><img src="../img/十二生肖 (10).png" >酉鸡</a></li>
+          <li><a href="../1/index.html?name=11"><img src="../img/十二生肖 (11).png" >戌狗</a></li>
+          <li><a href="../1/index.html?name=12"><img src="../img/十二生肖 (12).png" >亥猪</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="./index.html"><span class="style-p"><</span>思想哲学<span class="style-p">></span></a>
+          <ul class="submenu">
+            <li><a href="./index.html?name=1"><img src="../img/孔子.jpg" width="50px" height="70px">儒家思想</a></li>
+            <li><a href="./index.html?name=2"><img src="../img/老子.jpg" width="50px" height="70px">道家思想</a></li>
+            <li><a href="./index.html?name=3"><img src="../img/墨子.jpg" width="50px" height="70px">墨家思想</a></li>
+            <li><a href="./index.html?name=4"><img src="../img/韩非.jpg" width="50px" height="70px">法家思想</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="../4/index.html"><span class="style-p">~</span>传统节日<span class="style-p">~</span></a>
+          <ul class="submenu">
+            <li><a href="../4/index.html?name=1"><img src="../img/春节.png" >春节</a></li>
+            <li><a href="../4/index.html?name=2"><img src="../img/元宵节.png" >元宵节</a></li>
+            <li><a href="../4/index.html?name=3"><img src="../img/清明节.png" >清明节</a></li>
+            <li><a href="../4/index.html?name=4"><img src="../img/端午节.png" >端午节</a></li>
+            <li><a href="../4/index.html?name=5"><img src="../img/七夕节.png" >七夕节</a></li>
+            <li><a href="../4/index.html?name=6"><img src="../img/中秋节.png" >中秋节</a></li>
+            <li><a href="../4/index.html?name=7"><img src="../img/重阳节.png" >重阳节</a></li>
+            <li><a href="../4/index.html?name=8"><img src="../img/冬至节.png" >冬至节</a></li>
+            <li><a href="../4/index.html?name=9"><img src="../img/腊八节.png" >腊八节</a></li>
+            <li><a href="../4/index.html?name=10"><img src="../img/寒食节.png" >寒食节</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    
+  <!--内容区-->
+  <div id="main">
+    <div id="carousel">
+      <div>
+        <h1>~思想哲学~</h1>
+      </div>
+    </div>
+    <div id="main-div">
+      <div id="main-div-1">
+        <div class="img-left">
+          <p class="img-text-top">代表人物</p>
+          <img src="../img/孔子.jpg" >
+          <p class="img-text-bottom">孔子</p>
+        </div>
+        <div class="div-text">
+          <h2>儒家思想</h2>
+          <table>
+            <tr>
+              <td>思想核心：</td>
+              <td>以 “仁、义、礼、智、信” 为核心的五常伦理，“仁” 是孔子思想体系的核心，强调人与人之间的关爱、尊重与友善；“义” 指行为适合于 “礼”，是评判人们思想和行为的道德原则；“礼” 规范社会的等级秩序和人们的行为举止；“智” 指知道、了解、见解、知识、聪明、智慧等；“信” 则强调待人处事的诚实不欺，言行一致</td>
+            </tr>
+            <tr>
+              <td>政治主张：</td>
+              <td>提倡 “德治” 和 “仁政”，主张统治者要以仁爱之心治理国家，关心人民的福祉，轻徭薄赋，抨击暴政。认为通过道德感化可以使百姓自觉遵守社会秩序，实现社会的和谐稳定。</td>
+            </tr>
+            <tr>
+              <td>教育理念：</td>
+              <td>孔子首开私学，打破了贵族对教育的垄断，主张 “有教无类”，认为不论贵贱、贫富，人人都应有受教育的权利。在教育方法上，强调因材施教、启发诱导等。</td>
+            </tr>
+            <tr>
+              <td>著作：</td>
+              <td>孔子是儒家学派创始人，其思想核心是 “仁” 和 “礼”，主张 “仁者爱人”“克己复礼”，言论被门人整理为《论语》，还编订了六经。孟子是孔子思想的继承人，主张 “性善论”“仁政” 等，著作有《孟子》。荀子主张 “礼法并施”，提出 “制天命而用之” 的人定胜天的思想，其思想集中反映在《荀子》一书中</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="main-div-2">
+        <div class="img-right">
+          <p class="img-text-top">代表人物</p>
+          <img src="../img/老子.jpg" >
+          <p class="img-text-bottom">老子</p>
+        </div>
+        <div class="div-text">
+          <h2>道家思想</h2>
+          <table>
+            <tr>
+              <td>思想核心：</td>
+              <td>以 “道” 为核心概念，认为 “道” 是宇宙万物的本原和运行规律，强调顺应自然、遵循自然规律，追求人与自然的和谐统一。主张 “无为而治”，反对过多的人为干预，提倡让事物自然发展。</td>
+            </tr>
+            <tr>
+              <td>政治主张：</td>
+              <td>在政治上，道家倡导无为而治，认为统治者应该顺应民心，不妄为、不扰民，让百姓自然发展。反对苛政和繁琐的法令制度，主张简化政治，以达到天下大治的境界。</td>
+            </tr>
+            <tr>
+              <td>人生态度：</td>
+              <td>倡导一种超脱、豁达的人生态度，追求精神的自由和内心的平静。主张人们超越世俗的功名利禄，摆脱物欲的束缚，回归到自然纯真的状态。</td>
+            </tr>
+            <tr>
+              <td>著作：</td>
+              <td>老子是道家学派的创始人，其著作《道德经》是道家的经典之作，阐述了道家的核心思想和哲学观点。庄子继承和发展了老子的思想，强调追求精神的自由和逍遥，其著作有《庄子》，包括内篇、外篇、杂篇，其中内篇被认为是庄子本人的作品，如《逍遥游》《齐物论》等。</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="main-div-3">
+        <div class="img-left">
+          <p class="img-text-top">代表人物</p>
+          <img src="../img/墨子.jpg" >
+          <p class="img-text-bottom">墨子</p>
+        </div>
+        <div class="div-text">
+          <h2>墨家思想</h2>
+          <table>
+            <tr>
+              <td>思想核心：</td>
+              <td>主张 “兼爱”“非攻”“尚贤”“尚同”“节用”“节葬” 等。“兼爱” 是墨家思想的核心，强调无差别的爱，主张人们不分亲疏贵贱，彼此相爱互助；“非攻” 反对战争和暴力，倡导和平；“尚贤” 主张选拔贤能的人来治理国家和社会；“尚同” 要求人们在思想和行为上与上级保持一致；“节用” 和 “节葬” 则提倡节俭，反对铺张浪费。</td>
+            </tr>
+            <tr>
+              <td>政治主张：</td>
+              <td>提倡建立一个平等、互助、和平的社会秩序，主张打破贵族世袭制度，选拔有才能和品德的人担任官职，实现政治的清明和社会的公正。</td>
+            </tr>
+            <tr>
+              <td>组织形式：</td>
+              <td>墨家是一个有严密组织和纪律的团体，其成员被称为 “墨者”，墨者必须遵守墨家的纪律和规定，服从墨家领袖的指挥，为实现墨家的理想而奋斗。</td>
+            </tr>
+            <tr>
+              <td>著作：</td>
+              <td>墨子是墨家学派的创始人，其思想和言论被记录在《墨子》一书中，该书包括了墨子的政治、伦理、哲学、军事等方面的思想，是研究墨家学说的重要资料。</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="main-div-4">
+        <div class="img-right">
+          <p class="img-text-top">代表人物</p>
+          <img src="../img/韩非.jpg" >
+          <p class="img-text-bottom">韩非</p>
+        </div>
+        <div class="div-text">
+          <h2>法家思想</h2>
+          <table>
+            <tr>
+              <td>思想核心：</td>
+              <td>强调以法治国，主张通过制定严格的法律和规章制度来治理国家和社会，认为法律是维护社会秩序、实现国家富强的重要手段。注重严刑峻法，主张对违法犯罪行为进行严厉的惩罚，以达到威慑和预防犯罪的目的。</td>
+            </tr>
+            <tr>
+              <td>政治主张：</td>
+              <td>提倡 “德治” 和 “仁政”，主张统治者要以仁爱之心治理国家，关心人民的福祉，轻徭薄赋，抨击暴政。认为通过道德感化可以使百姓自觉遵守社会秩序，实现社会的和谐稳定。</td>
+            </tr>
+            <tr>
+              <td>教育理念：</td>
+              <td>孔子首开私学，打破了贵族对教育的垄断，主张 “有教无类”，认为不论贵贱、贫富，人人都应有受教育的权利。在教育方法上，强调因材施教、启发诱导等。</td>
+            </tr>
+            <tr>
+              <td>著作：</td>
+              <td>孔子是儒家学派创始人，其思想核心是 “仁” 和 “礼”，主张 “仁者爱人”“克己复礼”，言论被门人整理为《论语》，还编订了六经。孟子是孔子思想的继承人，主张 “性善论”“仁政” 等，著作有《孟子》。荀子主张 “礼法并施”，提出 “制天命而用之” 的人定胜天的思想，其思想集中反映在《荀子》一书中</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <button id="backToTopBtn">返回顶部</button>
+  </div>
+
+
+</body>
+<script>
+   // 以下是新增的JavaScript代码来控制二级菜单显示隐藏
+
+    // 获取所有具有二级菜单的一级菜单元素
+    const hasSubmenuItems = document.querySelectorAll('.has-submenu');
+
+    // 循环遍历每个具有二级菜单的一级菜单元素
+    hasSubmenuItems.forEach(item => {
+      const submenu = item.querySelector('.submenu');
+
+      // 给一级菜单添加鼠标进入事件处理函数
+      item.addEventListener('mouseenter', function () {
+        submenu.style.display = 'flex';
+      });
+
+      // 给一级菜单添加鼠标离开事件处理函数
+      item.addEventListener('mouseleave', function (e) {
+        // 判断鼠标离开时是否是移到了二级菜单上，如果是，则不隐藏二级菜单
+        if (!submenu.contains(e.relatedTarget)) {
+          submenu.style.display = 'none';
+        }
+      });
+
+      // 给二级菜单添加鼠标进入事件处理函数
+      submenu.addEventListener('mouseenter', function () {
+        submenu.style.display = 'flex';
+      });
+
+      // 给二级菜单添加鼠标离开事件处理函数
+      submenu.addEventListener('mouseleave', function (e) {
+        // 判断鼠标离开时是否是移到了一级菜单上，如果是，则不隐藏二级菜单
+        if (!item.contains(e.relatedTarget)) {
+          submenu.style.display = 'none';
+        }
+      });
+    });
+
+
+
+    window.addEventListener('load', function () {
+    let urlParams = new URLSearchParams(window.location.search);
+    let paramValue = parseInt(urlParams.get('name')); // 比如你的代码里如果传的参数叫 'index'，这里就填 'index'
+    if (paramValue) {
+      //收集url信息后，定位目标位置，页面滚动到目标位置。
+      let window_height = document.getElementById('main-div-'+paramValue)
+      window_height.scrollIntoView({
+        behavior:'smooth'
+      })
+    }
+})
+
+
+
+
+const backToTopBtn = document.getElementById('backToTopBtn');
+
+// 监听页面滚动事件
+window.addEventListener('scroll', function () {
+    // 获取当前页面滚动的垂直距离
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    if (scrollTop > 100) {
+        // 如果滚动距离大于100px，显示按钮
+        backToTopBtn.style.display = 'block';
+    } else {
+        // 否则隐藏按钮
+        backToTopBtn.style.display = 'none';
+    }
+});
+
+// 给返回顶部按钮添加点击事件监听器
+backToTopBtn.addEventListener('click', function () {
+    // 实现平滑滚动到顶部的效果，可以使用 window.scrollTo 或 window.scroll 等方法
+    window.scrollTo({
+        top: 0,
+        behavior:'smooth' // 设置滚动行为为平滑滚动，也可设置为 'auto' 表示瞬间滚动
+    });
+});
+
+  //导航栏跟踪
+  window.addEventListener('scroll', function () {
+    const nav = document.querySelector('.main-nav');
+    if (window.pageYOffset > 0) {
+        // 当页面垂直滚动距离大于0时，确保导航栏固定显示
+        nav.style.position = 'fixed';
+        nav.style.top = '0';
+    } else {
+        // 如果页面在顶部，恢复导航栏原本的定位（如果有），这里假设原本没有特殊定位，可根据实际情况调整
+        nav.style.position ='relative';
+    }
+});
+</script>
+</html>

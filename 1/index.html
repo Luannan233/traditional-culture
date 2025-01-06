@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>十二生肖</title>
+  <link rel="stylesheet" href="../index.css">
+</head>
+<style>
+  #product-images{
+    margin:auto;
+    text-align: center;
+    width: 1300px;
+    height: 720px;  
+  }
+  .main-images{
+    width: 1300px;
+    text-align: center;
+    transition: all 1s;
+  }
+  h1{
+    margin: 0;
+  }
+  h3{
+    color: gray;
+  }
+  .main-img{
+    transition: all 1s;
+  }
+  .main-img:hover{
+    transform:scale(1.1);
+  }
+  #main{
+  text-align: center;
+  margin: auto;
+  width: 800px;
+  background-color: rgb(156, 114, 114,0.4);
+  display: none;
+  font-size: 20px;
+  position: relative;
+  left: 110px;
+  top: -170px;
+  border-radius: 15px;
+  border: 1px solid black;
+  }
+  tr{
+    display: block;
+    margin: 20px 0px;
+  }
+  .th{
+    width: 100px;
+  }
+</style>
+<body>
+    <!--导航栏-->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">首页</a></li>
+        <li class="has-submenu">
+          <a href="../2/index.html"><span class="style-p">./</span>四大发明<span class="style-p">\.</span></a>
+          <ul class="submenu" style="left:200%;">
+            <!-- 这里可以添加四大发明相关的二级菜单具体内容 -->
+            <li><a href="../2/index.html?name=1"><img src="../img/四大发明1.png" >火药</a></li>
+            <li><a href="../2/index.html?name=2"><img src="../img/四大发明2.png" >造纸术</a></li>
+            <li><a href="../2/index.html?name=3"><img src="../img/四大发明3.png" >指南针</a></li>
+            <li><a href="../2/index.html?name=4"><img src="../img/四大发明4.png" >印刷术</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="./index.html"><span class="style-p">~%~</span>十二生肖<span class="style-p">~%~</span></a>
+          <ul class="submenu">
+          <li><a href="./index.html?name=1"><img src="../img/十二生肖 (1).png" >子鼠</a></li>
+          <li><a href="./index.html?name=2"><img src="../img/十二生肖 (2).png" >丑牛</a></li>
+          <li><a href="./index.html?name=3"><img src="../img/十二生肖 (3).png" >寅虎</a></li>
+          <li><a href="./index.html?name=4"><img src="../img/十二生肖 (4).png" >卯兔</a></li>
+          <li><a href="./index.html?name=5"><img src="../img/十二生肖 (5).png" >辰龙</a></li>
+          <li><a href="./index.html?name=6"><img src="../img/十二生肖 (6).png" >巳蛇</a></li>
+          <li><a href="./index.html?name=7"><img src="../img/十二生肖 (7).png" >午马</a></li>
+          <li><a href="./index.html?name=8"><img src="../img/十二生肖 (8).png" >未羊</a></li>
+          <li><a href="./index.html?name=9"><img src="../img/十二生肖 (9).png" >申猴</a></li>
+          <li><a href="./index.html?name=10"><img src="../img/十二生肖 (10).png" >酉鸡</a></li>
+          <li><a href="./index.html?name=11"><img src="../img/十二生肖 (11).png" >戌狗</a></li>
+          <li><a href="./index.html?name=12"><img src="../img/十二生肖 (12).png" >亥猪</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="../3/index.html"><span class="style-p"><</span>思想哲学<span class="style-p">></span></a>
+          <ul class="submenu">
+            <li><a href="../3/index.html?name=1"><img src="../img/孔子.jpg" width="50px" height="70px">儒家思想</a></li>
+            <li><a href="../3/index.html?name=2"><img src="../img/老子.jpg" width="50px" height="70px">道家思想</a></li>
+            <li><a href="../3/index.html?name=3"><img src="../img/墨子.jpg" width="50px" height="70px">墨家思想</a></li>
+            <li><a href="../3/index.html?name=4"><img src="../img/韩非.jpg" width="50px" height="70px">法家思想</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="../4/index.html"><span class="style-p">~</span>传统节日<span class="style-p">~</span></a>
+          <ul class="submenu">
+            <li><a href="../4/index.html?name=1"><img src="../img/春节.png" >春节</a></li>
+            <li><a href="../4/index.html?name=2"><img src="../img/元宵节.png" >元宵节</a></li>
+            <li><a href="../4/index.html?name=3"><img src="../img/清明节.png" >清明节</a></li>
+            <li><a href="../4/index.html?name=4"><img src="../img/端午节.png" >端午节</a></li>
+            <li><a href="../4/index.html?name=5"><img src="../img/七夕节.png" >七夕节</a></li>
+            <li><a href="../4/index.html?name=6"><img src="../img/中秋节.png" >中秋节</a></li>
+            <li><a href="../4/index.html?name=7"><img src="../img/重阳节.png" >重阳节</a></li>
+            <li><a href="../4/index.html?name=8"><img src="../img/冬至节.png" >冬至节</a></li>
+            <li><a href="../4/index.html?name=9"><img src="../img/腊八节.png" >腊八节</a></li>
+            <li><a href="../4/index.html?name=10"><img src="../img/寒食节.png" >寒食节</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  
+
+
+
+    <!--内容区-->
+      <!-- 商品图片展示模块 -->
+      <section id="product-images">
+        <div>
+          <h1>十二生肖</h1>
+          <h3 id="h3">点击任何图片查看详情</h3>
+        </div>
+        <div class="main-images">
+          <img src="../img/十二生肖 (1).png" 主图1" class="main-img" id="main-img-1">
+          <img src="../img/十二生肖 (2).png" 主图2" class="main-img" id="main-img-2">
+          <img src="../img/十二生肖 (3).png" 主图3" class="main-img" id="main-img-3">
+          <img src="../img/十二生肖 (4).png" 主图4" class="main-img" id="main-img-4">
+          <img src="../img/十二生肖 (5).png" 主图5" class="main-img" id="main-img-5">
+          <img src="../img/十二生肖 (6).png" 主图6" class="main-img" id="main-img-6">
+          <img src="../img/十二生肖 (7).png" 主图7" class="main-img" id="main-img-7">
+          <img src="../img/十二生肖 (8).png" 主图8" class="main-img" id="main-img-8">
+          <img src="../img/十二生肖 (9).png" 主图9" class="main-img" id="main-img-9">
+          <img src="../img/十二生肖 (10).png" 主图10" class="main-img" id="main-img-10">
+          <img src="../img/十二生肖 (11).png" 主图11" class="main-img" id="main-img-11">
+          <img src="../img/十二生肖 (12).png" 主图12" class="main-img" id="main-img-12">
+        </div>
+        <div>
+          <div id="main">
+          </div>
+        </div>
+      </section>
+</body>
+<script>
+    // 获取所有具有二级菜单的一级菜单元素，这部分代码你原本已有，保持不变，用于处理自身页面内的二级菜单交互
+    const hasSubmenuItems = document.querySelectorAll('.has-submenu');
+  // 循环遍历每个具有二级菜单的一级菜单元素，以下代码原已有，处理自身页面二级菜单显示隐藏等交互逻辑，保持不变
+  hasSubmenuItems.forEach(item => {
+      const submenu = item.querySelector('.submenu');
+      item.addEventListener('mouseenter', function () {
+          submenu.style.display = 'flex';
+      });
+      item.addEventListener('mouseleave', function (e) {
+          if (!submenu.contains(e.relatedTarget)) {
+              submenu.style.display = 'none';
+          }
+      });
+      submenu.addEventListener('mouseenter', function () {
+          submenu.style.display = 'flex';
+      });
+      submenu.addEventListener('mouseleave', function (e) {
+          if (!item.contains(e.relatedTarget)) {
+              submenu.style.display = 'none';
+          }
+      });
+  });
+
+  //主要内容出现
+  const imgElements = document.querySelectorAll('.main-img'); // 获取所有图片元素
+        imgElements.forEach((img, index) => {
+            img.style.display = 'none'; // 先隐藏所有图片
+            setTimeout(() => {
+                img.style.display = 'inline'; // 按顺序显示图片
+            }, index * 100); // 每个图片延迟一定时间显示，这里设置间隔500毫秒，可以根据需要调整
+        });
+
+  //页面加载时出现
+  window.addEventListener('load', function () {
+    let urlParams = new URLSearchParams(window.location.search);
+    let paramValue = parseInt(urlParams.get('name')); // 比如你的代码里如果传的参数叫 'index'，这里就填 'index'
+    if (paramValue) {
+      //调用函数
+      Changge(paramValue)
+    }
+});
+      
+
+  
+  // 点击图片出现
+  imgElements.forEach(img => {
+      img.addEventListener('click', function () {
+          let animalIndex;
+          animalIndex = parseInt(this.id.split('-')[2]);
+          //调用函数
+          Changge(animalIndex)
+      });
+  });
+  
+
+  //打包重复函数
+    function Changge(value){
+      let text_main = document.getElementById('main');
+      let mainImgContainer = document.getElementById('main-img-'+ value).parentNode;
+      let texth3 = document.getElementById('h3').parentNode;
+      for(let n=1;n<=imgElements.length;n++){
+          if(n!=value){
+            imgElements[n-1].remove()
+          }
+        }
+        n=1
+      switch (value) {
+              case 1:
+                  texth3.innerHTML =`<h1>子鼠</h1><h3 id="h3">点击图片返回</h3>`;
+                  text_main.innerHTML = `
+                    <table>
+                      <tr class="tr">
+                          <th class="th">
+                            象征意义：
+                          </th>
+                          <td>
+                            鼠繁殖能力强，古人认为其象征着多子多福、生命力旺盛。同时，鼠在生存中常需躲避危险，因而也代表着机警、聪慧和应变能力。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            神话传说：
+                          </th>
+                          <td>
+                            在 “玉帝挑选” 的传说中，老鼠不讲信义，没有叫醒花猫独自前往天庭应选。在排次序时，它又偷偷爬到牛背上，让人们误以为它比牛大，从而排在了十二生肖的首位。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            文化影响：
+                          </th>
+                          <td>
+                            在传统的民俗文化中，老鼠嫁女的故事广为流传，体现了人们对鼠既敬畏又希望与之和谐相处的心理。此外，在一些文学作品中，如《聊斋志异》中的《鼠戏》，也展现了鼠的机灵形象。
+                          </td>
+                      </tr>
+                    </table>
+                    `;
+                  break;
+              case 2:
+                  texth3.innerHTML =`<h1>丑牛</h1><h3 id="h3">点击图片返回</h3>`;
+                  text_main.innerHTML = `
+                    <table>
+                      <tr>
+                          <th class="th">
+                            象征意义：
+                          </th>
+                          <td>
+                            牛是勤劳、踏实、坚韧的象征，在中国古代农业社会中，牛是重要的劳动力，承担着耕种、拉车等繁重的工作，为人们的生活和生产做出了巨大贡献，因此也寓意着丰收和富足。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            神话传说：
+                          </th>
+                          <td>
+                            相传牛是最早到达天庭应选的动物之一，但最终被老鼠抢占了首位。不过，牛的勤劳和默默奉献的精神仍然得到了人们的高度赞扬和认可。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            文化影响：
+                          </th>
+                          <td>
+                            在古代诗词中，常以牛来表达对劳动者的赞美和对田园生活的向往，如 “耕犁千亩实千箱，力尽筋疲谁复伤”。同时，在一些地方的民俗活动中，还有给牛过生日等习俗，以表达对牛的感激之情。
+                          </td>
+                      </tr>
+                    </table>
+                    `;
+                  break;
+              case 3:
+                  texth3.innerHTML =`<h1>寅虎</h1><h3 id="h3">点击图片返回</h3>`;
+                  text_main.innerHTML = `
+                    <table>
+                      <tr>
+                          <th class="th">
+                            象征意义：
+                          </th>
+                          <td>
+                            虎是百兽之王，象征着力量、勇气、威严和王者之气。它的形象常常被用于代表英勇、正义和不可侵犯的权威，能够镇宅辟邪，给人带来安全感。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            神话传说：
+                          </th>
+                          <td>
+                            在生肖排序的传说中，老虎凭借其凶猛和强大的实力，被推选为山中之王，排在了十二生肖的第三位。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            文化影响：
+                          </th>
+                          <td>
+                            虎在中国文化中有着重要的地位，许多成语都与虎有关，如 “虎虎生威”“龙腾虎跃”“如虎添翼” 等，这些成语都体现了虎的强大和威风凛凛的形象。在民间艺术中，虎的形象也经常出现，如虎头鞋、虎头帽等，寓意着孩子能够健康成长、勇敢无畏。
+                          </td>
+                      </tr>
+                    </table>
+                    `;
+                  break;
+              case 4:
+                  texth3.innerHTML =`<h1>卯兔</h1><h3 id="h3">点击图片返回</h3>`;
+                  text_main.innerHTML = `
+                    <table>
+                      <tr>
+                          <th class="th">
+                            象征意义：
+                          </th>
+                          <td>
+                            兔代表着温和、善良、细腻、谨慎和敏捷。兔子的外形可爱，给人一种温柔的感觉，同时它的行动迅速，反应敏捷，也象征着机智和灵活。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            神话传说：
+                          </th>
+                          <td>
+                            在 “玉帝挑选” 的故事中，野兔与苍龙比赛跑步，凭借自己的本领赢得了比赛，最终排在了苍龙之前、老虎之后。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            文化影响：
+                          </th>
+                          <td>
+                            在中国的传统文化中，兔与月亮有着密切的联系，传说玉兔在月宫中捣药，因此兔也象征着纯洁和美好。在一些文学作品和民间传说中，兔常常被描绘成聪明伶俐、善解人意的形象，如《西游记》中的玉兔精。
+                          </td>
+                      </tr>
+                    </table>
+                    `;
+                  break;
+              case 5:
+                  texth3.innerHTML =`<h1>辰龙</h1><h3 id="h3">点击图片返回</h3>`;
+                  text_main.innerHTML = `
+                    <table>
+                      <tr>
+                          <th class="th">
+                            象征意义：
+                          </th>
+                          <td>
+                            龙是中华民族的精神象征，代表着权力、尊贵、神秘、吉祥和繁荣昌盛。龙被视为一种具有超凡力量和神奇能力的神物，能够呼风唤雨、掌控天地，是古代帝王的象征。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            神话传说：
+                          </th>
+                          <td>
+                            传说龙向鸡借了美丽的冠才信心十足地前去赴会。在生肖排序时，龙因被封为渔中之王而甘居老鼠和老黄牛之后。此外，还有许多关于龙的神话故事，如 “叶公好龙”“哪吒闹海” 等。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            文化影响：
+                          </th>
+                          <td>
+                            龙在中国文化中的影响无处不在，从宫殿建筑到民间艺术，从传统服饰到节日庆典，都能看到龙的形象。如春节期间的舞龙表演，寓意着风调雨顺、国泰民安。龙的形象还被广泛应用于文学创作中，如《西游记》中的四海龙王等。
+                          </td>
+                      </tr>
+                    </table>
+                    `;
+                  break;
+              case 6:
+                  texth3.innerHTML =`<h1>巳蛇</h1><h3 id="h3">点击图片返回</h3>`;
+                  text_main.innerHTML = `
+                    <table>
+                      <tr>
+                          <th class="th">
+                            象征意义：
+                          </th>
+                          <td>
+                            蛇代表着灵敏、神秘、智慧和诡异。蛇的行动无声无息，善于隐藏自己，给人一种神秘莫测的感觉。同时，蛇也具有很强的生存能力和适应能力，能够在各种环境中生存繁衍。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            神话传说：
+                          </th>
+                          <td>
+                            在生肖排序的传说中，青蛇在人间进行的杂技表演中表现出色，最终排在了前头。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            文化影响：
+                          </th>
+                          <td>
+                            在古代文化中，蛇有时被视为神灵的化身，如伏羲和女娲的形象就是人首蛇身，象征着人类的始祖和生命的起源。在一些少数民族的文化中，蛇也是重要的图腾崇拜对象。同时，蛇的形象也经常出现在文学作品和民间传说中，如《白蛇传》中的白娘子和小青，她们的形象深入人心，展现了蛇的善良、美丽和勇敢。
+                          </td>
+                      </tr>
+                    </table>
+                    `;
+                  break;
+              case 7:
+                  texth3.innerHTML =`<h1>午马</h1><h3 id="h3">点击图片返回</h3>`;
+                  text_main.innerHTML = `
+                    <table>
+                      <tr>
+                          <th class="th">
+                            象征意义：
+                          </th>
+                          <td>
+                            马代表着力量、速度、自由、奔放和忠诚。马是人类的好朋友，在古代战争、交通和农业生产中都发挥了重要作用，因此也象征着勇敢和奋斗精神。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            神话传说：
+                          </th>
+                          <td>
+                            相传马在帮助青蛇制作龙衣的过程中表现出色，最终排在了前头。此外，还有许多关于马的神话故事，如 “天马行空”“伯乐相马” 等。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            文化影响：
+                          </th>
+                          <td>
+                            在中国文化中，马的形象非常丰富，许多成语都与马有关，如 “马到成功”“一马当先”“万马奔腾” 等，这些成语都体现了马的积极向上的形象。在传统的绘画、雕塑和文学作品中，马也是常见的题材，如唐代画家韩干的《牧马图》，展现了马的矫健和壮美。
+                          </td>
+                      </tr>
+                    </table>
+                    `;
+                  break;
+              case 8:
+                  texth3.innerHTML =`<h1>未羊</h1><h3 id="h3">点击图片返回</h3>`;
+                  text_main.innerHTML = `
+                    <table>
+                      <tr>
+                          <th class="th">
+                            象征意义：
+                          </th>
+                          <td>
+                            羊代表着温和、善良、柔顺、吉祥和美好。羊的性格温顺，给人一种亲切、友好的感觉，因此也象征着和谐、团结和幸福
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            神话传说：
+                          </th>
+                          <td>
+                            在生肖排序的传说中，山羊因为对猴子的帮助不热心，最终排在了后头。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            文化影响：
+                          </th>
+                          <td>
+                            在中国传统文化中，羊与 “祥” 字谐音，因此羊也被视为吉祥的象征。在一些传统的节日和庆典中，如春节和婚礼等，人们常常会用羊的形象来装饰，寓意着吉祥如意、幸福美满。此外，羊的形象也经常出现在文学作品和民间传说中，如《喜羊羊与灰太狼》中的喜羊羊等，展现了羊的聪明、勇敢和善良。
+                          </td>
+                      </tr>
+                    </table>
+                    `;
+                  break;
+              case 9:
+                  texth3.innerHTML =`<h1>申猴</h1><h3 id="h3">点击图片返回</h3>`;
+                  text_main.innerHTML = `
+                    <table>
+                      <tr>
+                          <th class="th">
+                            象征意义：
+                          </th>
+                          <td>
+                            猴代表着机智、灵活、聪明、活泼和顽皮。猴子的头脑灵活，善于学习和模仿，能够迅速适应环境的变化，因此也象征着创新和进取精神。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            神话传说：
+                          </th>
+                          <td>
+                            在生肖排序的传说中，猴子在人间进行的杂技表演中虽然出现了一些意外，但最终还是排在了后头。此外，还有许多关于猴的神话故事，如《西游记》中的孙悟空，他的形象深入人心，展现了猴的机智、勇敢和反抗精神。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            文化影响：
+                          </th>
+                          <td>
+                            猴在中国文化中的形象非常丰富，许多成语都与猴有关，如 “猴年马月”“沐猴而冠”“尖嘴猴腮” 等。在传统的民间艺术中，猴的形象也经常出现，如猴戏、剪纸等，深受人们的喜爱。
+                          </td>
+                      </tr>
+                    </table>
+                    `;
+                  break;
+              case 10:
+                  texth3.innerHTML =`<h1>酉鸡</h1><h3 id="h3">点击图片返回</h3>`;
+                  text_main.innerHTML = `
+                    <table>
+                      <tr>
+                          <th class="th">
+                            象征意义：
+                          </th>
+                          <td>
+                            鸡代表着勤奋、自律、警觉、准时和勇敢。鸡每天按时打鸣，提醒人们起床劳作，因此也象征着守时和勤奋。同时，鸡在面对危险时会勇敢地保护自己和同伴，也象征着勇敢和坚毅。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            神话传说：
+                          </th>
+                          <td>
+                            在生肖排序的传说中，公鸡因为把两只角送给了苍龙，最终排在了后头。此外，还有许多关于鸡的神话故事，如 “金鸡报晓”“鸡犬升天” 等。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            文化影响：
+                          </th>
+                          <td>
+                            在中国传统文化中，鸡与 “吉” 字谐音，因此鸡也被视为吉祥的象征。在一些传统的节日和庆典中，如春节和婚礼等，人们常常会用鸡的形象来装饰，寓意着吉祥如意、幸福美满。此外，鸡的形象也经常出现在文学作品和民间传说中，如《西游记》中的昴日星官，他的形象展现了鸡的神奇和威严。
+                          </td>
+                      </tr>
+                    </table>
+                    `;
+                  break;
+              case 11:
+                  texth3.innerHTML =`<h1>戌狗</h1><h3 id="h3">点击图片返回</h3>`;
+                  text_main.innerHTML = `
+                    <table>
+                      <tr>
+                          <th class="th">
+                            象征意义：
+                          </th>
+                          <td>
+                            狗代表着忠诚、友善、勇敢、警觉和守护。狗是人类最忠实的朋友，能够为主人看家护院、守护财产，对主人忠心耿耿，不离不弃
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            神话传说：
+                          </th>
+                          <td>
+                            在生肖排序的传说中，狗因为在给野兔当裁判员时出了问题，最终排在了最后头。不过，狗的忠诚和勇敢的精神仍然得到了人们的高度赞扬和认可。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            文化影响：
+                          </th>
+                          <td>
+                            在中国传统文化中，狗的形象非常丰富，许多成语都与狗有关，如 “狗急跳墙”“狼心狗肺”“鸡鸣狗盗” 等。在一些少数民族的文化中，狗也是重要的图腾崇拜对象。同时，狗的形象也经常出现在文学作品和民间传说中，如《西游记》中的哮天犬，展现了狗的忠诚和勇猛。
+                          </td>
+                      </tr>
+                    </table>
+                    `;
+                  break;
+              case 12:
+                  texth3.innerHTML =`<h1>亥猪</h1><h3 id="h3">点击图片返回</h3>`;
+                  text_main.innerHTML = `
+                    <table>
+                      <tr>
+                          <th class="th">
+                            象征意义：
+                          </th>
+                          <td>
+                            猪代表着温和、憨厚、朴实、富饶和懒惰。猪的性格温顺，给人一种憨厚可爱的感觉，同时猪的食量较大，也象征着富足和繁荣
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            神话传说：
+                          </th>
+                          <td>
+                            在生肖排序的传说中，黑猪因为别有用心地煽动其他动物，最终被玉帝排在了最后头。不过，猪在中国文化中仍然有着重要的地位，是人们生活中不可或缺的家畜之一。
+                          </td>
+                      </tr>
+                      <tr>
+                          <th class="th">
+                            文化影响：
+                          </th>
+                          <td>
+                            在中国传统文化中，猪与 “朱” 字谐音，因此猪也被视为吉祥的象征。在一些传统的节日和庆典中，如春节和婚礼等，人们常常会用猪的形象来装饰，寓意着吉祥如意、幸福美满。此外，猪的形象也经常出现在文学作品和民间传说中，如《西游记》中的猪八戒，他的形象深入人心，展现了猪的憨厚、可爱和贪吃的特点。
+                          </td>
+                      </tr>
+                    </table>
+                    `;
+                  break;
+          }
+          mainImgContainer.innerHTML = `<a href="./index.html"><img src="../img/十二生肖 (${value}).png"  class="main-img" id="main-img-1"></a>`
+          mainImgContainer.style = 'transform:scale(1.5) translateX(-300px) translateY(100px)'
+          
+          setTimeout(()=>{
+            text_main.style.display = "block"
+          },1000)
+
+
+        }
+
+
+  //导航栏跟踪
+  window.addEventListener('scroll', function () {
+    const nav = document.querySelector('.main-nav');
+    if (window.pageYOffset > 0) {
+        // 当页面垂直滚动距离大于0时，确保导航栏固定显示
+        nav.style.position = 'fixed';
+        nav.style.top = '0';
+    } else {
+        // 如果页面在顶部，恢复导航栏原本的定位（如果有），这里假设原本没有特殊定位，可根据实际情况调整
+        nav.style.position ='relative';
+    }
+});
+
+
+
+
+  </script>
+</html>

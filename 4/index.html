@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>传统节日</title>
+  <link rel="stylesheet" href="../index.css">
+</head>
+<style>
+.carousel{
+  background: url(../img/传统节日背景图片.png) no-repeat;
+}
+@keyframes title{
+  from{
+    transform:rotate(500deg)  scale(0);
+  }
+  to{
+    
+  }
+}
+body{
+  background-color: rgb(175, 190, 177);
+}
+.carousel h1{
+  text-align: center;
+  font-size: 70px;
+  animation: title 2s;
+  width: 370px;
+  height: 500px;
+  line-height: 500px;
+  margin: auto;
+  color: rgb(192, 41, 41);
+}
+#main{
+  text-align: center;
+  box-sizing: border-box;
+  width: 1200px;
+  margin: auto;
+  background-color: rgb(84, 151, 53);
+}
+#main-divs{
+  margin: auto;
+  width: 1200px;
+  height: 850px;
+  display: flex;
+  flex-direction: row; /* 设置为横向排列（之前你希望横排显示二级标题，已有的设置保留） */
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.main-div{
+  width: 300px;
+  height: 250px;
+}
+.div-outside{
+  margin: 50px;
+  width: 200px;
+  height: 200px;
+  transform:rotate(45deg);
+  overflow: hidden;
+  transition: all 1s;
+}
+.div-inside{
+  width: 200px;
+  height: 200px;
+  transform:rotate(-45deg);
+  transition: all 1s;
+}
+.main-div-p{
+  position: relative;
+  top: -300px;
+  font-size: 30px;
+  color: rgb(0, 0, 0,0.4);
+}
+.div-outside:hover{
+  transform: rotate(405deg) scale(1.4);
+}
+</style>
+<body>
+    <!--导航栏-->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">首页</a></li>
+        <li class="has-submenu">
+        <a href="../2/index.html"><span class="style-p">./</span>四大发明<span class="style-p">\.</span></a>
+          <ul class="submenu" style="left:200%;">
+            <!-- 这里可以添加四大发明相关的二级菜单具体内容 -->
+             <li><a href="../2/index.html?name=1"><img src="../img/四大发明1.png" >火药</a></li>
+             <li><a href="../2/index.html?name=2"><img src="../img/四大发明2.png" >造纸术</a></li>
+             <li><a href="../2/index.html?name=3"><img src="../img/四大发明3.png" >指南针</a></li>
+             <li><a href="../2/index.html?name=4"><img src="../img/四大发明4.png" >印刷术</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+        <a href="../1/index.html"><span class="style-p">~%~</span>十二生肖<span class="style-p">~%~</span></a>
+          <ul class="submenu">
+            <li><a href="../1/index.html?name=1"><img src="../img/十二生肖 (1).png" >子鼠</a></li>
+          <li><a href="../1/index.html?name=2"><img src="../img/十二生肖 (2).png" >丑牛</a></li>
+          <li><a href="../1/index.html?name=3"><img src="../img/十二生肖 (3).png" >寅虎</a></li>
+          <li><a href="../1/index.html?name=4"><img src="../img/十二生肖 (4).png" >卯兔</a></li>
+          <li><a href="../1/index.html?name=5"><img src="../img/十二生肖 (5).png" >辰龙</a></li>
+          <li><a href="../1/index.html?name=6"><img src="../img/十二生肖 (6).png" >巳蛇</a></li>
+          <li><a href="../1/index.html?name=7"><img src="../img/十二生肖 (7).png" >午马</a></li>
+          <li><a href="../1/index.html?name=8"><img src="../img/十二生肖 (8).png" >未羊</a></li>
+          <li><a href="../1/index.html?name=9"><img src="../img/十二生肖 (9).png" >申猴</a></li>
+          <li><a href="../1/index.html?name=10"><img src="../img/十二生肖 (10).png" >酉鸡</a></li>
+          <li><a href="../1/index.html?name=11"><img src="../img/十二生肖 (11).png" >戌狗</a></li>
+          <li><a href="../1/index.html?name=12"><img src="../img/十二生肖 (12).png" >亥猪</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="../3/index.html"><span class="style-p"><</span>思想哲学<span class="style-p">></span></a>
+          <ul class="submenu">
+            <li><a href="../3/index.html?name=name=1"><img src="../img/孔子.jpg" width="50px" height="70px">儒家思想</a></li>
+            <li><a href="../3/index.html?name=name=2"><img src="../img/老子.jpg" width="50px" height="70px">道家思想</a></li>
+            <li><a href="../3/index.html?name=name=3"><img src="../img/墨子.jpg" width="50px" height="70px">墨家思想</a></li>
+            <li><a href="../3/index.html?name=name=4"><img src="../img/韩非.jpg" width="50px" height="70px">法家思想</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="./index.html"><span class="style-p">~</span>传统节日<span class="style-p">~</span></a>
+          <ul class="submenu">
+            <li><a href="./index.html?name=1"><img src="../img/春节.png" >春节</a></li>
+            <li><a href="./index.html?name=2"><img src="../img/元宵节.png" >元宵节</a></li>
+            <li><a href="./index.html?name=3"><img src="../img/清明节.png" >清明节</a></li>
+            <li><a href="./index.html?name=4"><img src="../img/端午节.png" >端午节</a></li>
+            <li><a href="./index.html?name=5"><img src="../img/七夕节.png" >七夕节</a></li>
+            <li><a href="./index.html?name=6"><img src="../img/中秋节.png" >中秋节</a></li>
+            <li><a href="./index.html?name=7"><img src="../img/重阳节.png" >重阳节</a></li>
+            <li><a href="./index.html?name=8"><img src="../img/冬至节.png" >冬至节</a></li>
+            <li><a href="./index.html?name=9"><img src="../img/腊八节.png" >腊八节</a></li>
+            <li><a href="./index.html?name=10"><img src="../img/寒食节.png" >寒食节</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+
+    <!--内容区-->
+    <div>
+      <div class="carousel">
+        <div>
+          <h1>~传统节日~</h1>
+        </div>
+      </div>
+
+      <div id="main">
+          <div id="main-divs">
+            <div class="main-div" id="main-div-1">
+              <div class="div-outside">
+                <div class="div-inside" style="background: url(../img/春节.png);background-size: 200px;">
+                </div>
+              </div>
+              <p class="main-div-p">春节</p>
+            </div>
+
+            <div class="main-div" id="main-div-2">
+              <div class="div-outside">
+                <div class="div-inside" style="background: url(../img/元宵节.png);background-size: 200px;">
+                </div>
+              </div>
+              <p class="main-div-p">元宵节</p>
+            </div>
+            
+            <div class="main-div" id="main-div-3">
+              <div class="div-outside">
+                <div class="div-inside" style="background: url(../img/寒食节.png);background-size: 200px;">
+                </div>
+              </div>
+              <p class="main-div-p">寒食节</p>
+            </div>
+            
+            <div class="main-div" id="main-div-4">
+              <div class="div-outside">
+                <div class="div-inside" style="background: url(../img/清明节.png);background-size: 200px;">
+                </div>
+              </div>
+              <p class="main-div-p">清明节</p>
+            </div>
+            
+            <div class="main-div" id="main-div-5">
+              <div class="div-outside">
+                <div class="div-inside" style="background: url(../img/端午节.png);background-size: 200px;">
+                </div>
+              </div>
+              <p class="main-div-p">端午节</p>
+            </div>
+            
+            <div class="main-div" id="main-div-6">
+              <div class="div-outside">
+                <div class="div-inside" style="background: url(../img/七夕节.png);background-size: 200px;">
+                </div>
+              </div>
+              <p class="main-div-p">七夕节</p>
+            </div>
+            
+            <div class="main-div" id="main-div-7">
+              <div class="div-outside">
+                <div class="div-inside" style="background: url(../img/中秋节.png);background-size: 200px;">
+                </div>
+              </div>
+              <p class="main-div-p">中秋节</p>
+            </div>
+            
+            <div class="main-div" id="main-div-8">
+              <div class="div-outside">
+                <div class="div-inside" style="background: url(../img/重阳节.png);background-size: 200px;">
+                </div>
+              </div>
+              <p class="main-div-p">重阳节</p>
+            </div>
+            
+            <div class="main-div" id="main-div-9">
+              <div class="div-outside">
+                <div class="div-inside" style="background: url(../img/冬至节.png);background-size: 200px;">
+                </div>
+              </div>
+              <p class="main-div-p">冬至节</p>
+            </div>
+            
+            <div class="main-div" id="main-div-10">
+              <div class="div-outside">
+                <div class="div-inside" style="background: url(../img/腊八节.png);background-size: 200px;">
+                </div>
+              </div>
+              <p class="main-div-p">腊八节</p>
+            </div>
+            
+          </div>
+      </div>
+    </div>
+
+
+
+
+
+      <!-- 商品图片展示模块 -->
+</body>
+<script>
+  // 获取所有具有二级菜单的一级菜单元素，这部分代码你原本已有，保持不变，用于处理自身页面内的二级菜单交互
+  const hasSubmenuItems = document.querySelectorAll('.has-submenu');
+  // 循环遍历每个具有二级菜单的一级菜单元素，以下代码原已有，处理自身页面二级菜单显示隐藏等交互逻辑，保持不变
+  hasSubmenuItems.forEach(item => {
+      const submenu = item.querySelector('.submenu');
+      item.addEventListener('mouseenter', function () {
+          submenu.style.display = 'flex';
+      });
+      item.addEventListener('mouseleave', function (e) {
+          if (!submenu.contains(e.relatedTarget)) {
+              submenu.style.display = 'none';
+          }
+      });
+      submenu.addEventListener('mouseenter', function () {
+          submenu.style.display = 'flex';
+      });
+      submenu.addEventListener('mouseleave', function (e) {
+          if (!item.contains(e.relatedTarget)) {
+              submenu.style.display = 'none';
+          }
+      });
+  });
+  
+  window.addEventListener('load', function () {
+    let urlParams = new URLSearchParams(window.location.search);
+    let paramValue = parseInt(urlParams.get('name')); // 比如你的代码里如果传的参数叫 'index'，这里就填 'index'
+    if (paramValue) {
+      //调用函数
+      Changge(paramValue)
+    }
+})
+
+
+
+  let main_div = document.querySelectorAll('.main-div')
+  main_div.forEach(div =>{
+    div.addEventListener('click',function(){
+    let nav = parseInt(this.id.split('-')[2])
+      Changge(nav)
+    })
+  })
+
+  function Changge(value){
+    switch(value){
+      case 1:
+        window.location = './holiday/Spring_Festival.html'
+        break
+      case 2:
+        window.location = './holiday/Lantern_Festival.html'
+        break
+      case 3:
+        window.location = './holiday/Cold_Food_Festival.html'
+        break
+      case 4:
+        window.location = './holiday/Qingming_Festival.html'
+        break
+      case 5:
+        window.location = './holiday/Dragon_Boat_Festival.html'
+        break
+      case 6:
+        window.location = './holiday/Qixi_Festival.html'
+        break
+      case 7:
+        window.location = './holiday/Mid-Autumn_Festival.html'
+        break
+      case 8:
+        window.location = './holiday/Double_Ninth_Festival.html'
+        break
+      case 9:
+        window.location = './holiday/Winter_Solstice.html'
+        break
+      case 10:
+        window.location = './holiday/Laba.html'
+        break
+    }
+  }
+  //导航栏跟踪
+  window.addEventListener('scroll', function () {
+    const nav = document.querySelector('.main-nav');
+    if (window.pageYOffset > 0) {
+        // 当页面垂直滚动距离大于0时，确保导航栏固定显示
+        nav.style.position = 'fixed';
+        nav.style.top = '0';
+    } else {
+        // 如果页面在顶部，恢复导航栏原本的定位（如果有），这里假设原本没有特殊定位，可根据实际情况调整
+        nav.style.position ='relative';
+    }
+});
+  </script>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>四大发明</title>
+  <link rel="stylesheet" href="../index.css">
+</head>
+<style>
+  #product-images{
+    margin: auto;
+  }
+
+  #main-imgs{
+    border-radius: 100%;
+    background-color: red;
+    transition:all 5s ease-in-out;
+    margin: auto;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    border: 20px solid red;
+  }
+  .main-img{
+    text-align: center;
+    padding: 0px 0px 70px 0px;
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    left: 10%;
+    top: 3%;
+    z-index: 1;
+  }
+  .main-background{
+    background-color: rgb(243, 202, 90);
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    z-index: -1;
+    transform: rotate(45deg); 
+    top: -250px;
+  }
+  .main-img:nth-child(2){
+    transform: rotate(90deg);
+  }
+  .main-img:nth-child(3){
+    transform: rotate(180deg);
+  }
+  .main-img:nth-child(4){
+    transform: rotate(270deg);
+  }
+  .main-img img{
+    width: 100px;
+  }
+  h3{
+    color: gray;
+  }
+  #main{
+  margin: auto;
+  width: 500px;
+  position: relative;
+  top: -200px;
+ }
+ #main h1{
+  text-align: center;
+ }
+ #button{
+  position: relative;
+  text-align: center;
+  top: -410px;
+  margin: auto;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  background-color: red;
+  z-index: 3;
+ }
+ #zhizhen{
+	 position: relative;
+	 top: -400px;
+   margin: auto;
+   width: 2px;
+	 border-width: 50px 24px;
+	 border-style: solid;
+	 border-color: transparent;
+	 border-bottom-color: red;
+   z-index: 3;
+ }
+</style>
+<body>
+    <!--导航栏-->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">首页</a></li>
+        <li class="has-submenu">
+          <a href="./index.html"><span class="style-p">./</span>四大发明<span class="style-p">\.</span></a>
+          <ul class="submenu" style="left:200%;">
+            <!-- 这里可以添加四大发明相关的二级菜单具体内容 -->
+             <li><a href="./index.html?name=1"><img src="../img/四大发明1.png" >火药</a></li>
+             <li><a href="./index.html?name=2"><img src="../img/四大发明2.png" >造纸术</a></li>
+             <li><a href="./index.html?name=3"><img src="../img/四大发明3.png" >指南针</a></li>
+             <li><a href="./index.html?name=4"><img src="../img/四大发明4.png" >印刷术</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="../1/index.html"><span class="style-p">~%~</span>十二生肖<span class="style-p">~%~</span></a>
+          <ul class="submenu">
+            <li><a href="../1/index.html?name=1"><img src="../img/十二生肖 (1).png" >子鼠</a></li>
+          <li><a href="../1/index.html?name=2"><img src="../img/十二生肖 (2).png" >丑牛</a></li>
+          <li><a href="../1/index.html?name=3"><img src="../img/十二生肖 (3).png" >寅虎</a></li>
+          <li><a href="../1/index.html?name=4"><img src="../img/十二生肖 (4).png" >卯兔</a></li>
+          <li><a href="../1/index.html?name=5"><img src="../img/十二生肖 (5).png" >辰龙</a></li>
+          <li><a href="../1/index.html?name=6"><img src="../img/十二生肖 (6).png" >巳蛇</a></li>
+          <li><a href="../1/index.html?name=7"><img src="../img/十二生肖 (7).png" >午马</a></li>
+          <li><a href="../1/index.html?name=8"><img src="../img/十二生肖 (8).png" >未羊</a></li>
+          <li><a href="../1/index.html?name=9"><img src="../img/十二生肖 (9).png" >申猴</a></li>
+          <li><a href="../1/index.html?name=10"><img src="../img/十二生肖 (10).png" >酉鸡</a></li>
+          <li><a href="../1/index.html?name=11"><img src="../img/十二生肖 (11).png" >戌狗</a></li>
+          <li><a href="../1/index.html?name=12"><img src="../img/十二生肖 (12).png" >亥猪</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="../3/index.html"><span class="style-p"><</span>思想哲学<span class="style-p">></span></a>
+          <ul class="submenu">
+            <li><a href="../3/index.html?name=1"><img src="../img/孔子.jpg" width="50px" height="70px">儒家思想</a></li>
+            <li><a href="../3/index.html?name=2"><img src="../img/老子.jpg" width="50px" height="70px">道家思想</a></li>
+            <li><a href="../3/index.html?name=3"><img src="../img/墨子.jpg" width="50px" height="70px">墨家思想</a></li>
+            <li><a href="../3/index.html?name=4"><img src="../img/韩非.jpg" width="50px" height="70px">法家思想</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="../4/index.html"><span class="style-p">~</span>传统节日<span class="style-p">~</span></a>
+          <ul class="submenu">
+            <li><a href="../4/index.html?name=1"><img src="../img/春节.png" >春节</a></li>
+            <li><a href="../4/index.html?name=2"><img src="../img/元宵节.png" >元宵节</a></li>
+            <li><a href="../4/index.html?name=3"><img src="../img/清明节.png" >清明节</a></li>
+            <li><a href="../4/index.html?name=4"><img src="../img/端午节.png" >端午节</a></li>
+            <li><a href="../4/index.html?name=5"><img src="../img/七夕节.png" >七夕节</a></li>
+            <li><a href="../4/index.html?name=6"><img src="../img/中秋节.png" >中秋节</a></li>
+            <li><a href="../4/index.html?name=7"><img src="../img/重阳节.png" >重阳节</a></li>
+            <li><a href="../4/index.html?name=8"><img src="../img/冬至节.png" >冬至节</a></li>
+            <li><a href="../4/index.html?name=9"><img src="../img/腊八节.png" >腊八节</a></li>
+            <li><a href="../4/index.html?name=10"><img src="../img/寒食节.png" >寒食节</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  
+
+
+
+    <!--内容区-->
+      <!-- 商品图片展示模块 -->
+      <section id="product-images">
+        <div style="text-align: center;">
+          <h1>四大发明</h1>
+        </div>
+        <div id="main-imgs">
+          <div class="main-img" >
+            <div class="main-background"></div>
+            <img src="../img/四大发明1.png" id="main-img-1">
+            <p>指南针</p>
+          </div>
+          <div class="main-img" >
+            <div class="main-background"></div>
+            <img src="../img/四大发明2.png" id="main-img-2">
+            <p>造纸术</p>
+          </div>
+          <div class="main-img" >
+            <div class="main-background"></div>
+            <img src="../img/四大发明3.png" id="main-img-3">
+            <p>火药</p>
+          </div>
+          <div class="main-img" >
+            <div class="main-background"></div>
+            <img src="../img/四大发明4.png" id="main-img-4">
+            <p>印刷术</p>
+          </div>
+        </div>
+        <div id="main-button" style="margin: auto;width: 80px;">
+          <div id="zhizhen"></div>
+          <div id="button">点击旋转<br>查看知识</div>
+        </div>
+        
+        <div>
+          <div id="main">
+
+          </div>
+        </div>
+      </section>
+</body>
+<script>
+  // 获取所有具有二级菜单的一级菜单元素，这部分代码你原本已有，保持不变，用于处理自身页面内的二级菜单交互
+  const hasSubmenuItems = document.querySelectorAll('.has-submenu');
+  // 循环遍历每个具有二级菜单的一级菜单元素，以下代码原已有，处理自身页面二级菜单显示隐藏等交互逻辑，保持不变
+  hasSubmenuItems.forEach(item => {
+      const submenu = item.querySelector('.submenu');
+      item.addEventListener('mouseenter', function () {
+          submenu.style.display = 'flex';
+      });
+      item.addEventListener('mouseleave', function (e) {
+          if (!submenu.contains(e.relatedTarget)) {
+              submenu.style.display = 'none';
+          }
+      });
+      submenu.addEventListener('mouseenter', function () {
+          submenu.style.display = 'flex';
+      });
+      submenu.addEventListener('mouseleave', function (e) {
+          if (!item.contains(e.relatedTarget)) {
+              submenu.style.display = 'none';
+          }
+      });
+  });
+  
+    //导航栏跟踪
+    window.addEventListener('scroll', function () {
+    const nav = document.querySelector('.main-nav');
+    if (window.pageYOffset > 0) {
+        // 当页面垂直滚动距离大于0时，确保导航栏固定显示
+        nav.style.position = 'fixed';
+        nav.style.top = '0';
+    } else {
+        // 如果页面在顶部，恢复导航栏原本的定位（如果有），这里假设原本没有特殊定位，可根据实际情况调整
+        nav.style.position ='relative';
+    }
+});
+  
+
+  let img = document.getElementById('main-imgs')
+  let button = document.getElementById('main-button')
+  let main = document.getElementById('main')
+  let degree = 0
+  let type = 0
+  button.onclick = function(){
+    degree -= Math.random() * 360 + 3600
+    img.style.transform = 'rotate('+ degree +'deg)'
+    degree_1 = parseInt(degree % 360)
+      console.log(degree_1)
+      if(-45<=degree_1&&degree_1<0){
+        type = 1
+      }
+      else if(-135<=degree_1&&degree_1<-45){
+        type = 2
+      }
+      else if(-225<=degree_1&&degree_1<-135){
+        type = 3
+      }
+      else if(-315<=degree_1&&degree_1<-225){
+        type = 4
+      }
+      else if(degree_1<-315){
+        type = 1
+      }
+      console.log(type)
+    setTimeout(function(){
+      Change(type)
+    },5100)
+    
+  }
+
+
+  function Change(value){
+    switch(value){
+      case 1:
+        main.innerHTML = `
+            <h1>指南针</h1>
+            <h3>发明背景与发展历程：</h3>
+            <span style="text-indent:initial 2em">古代人们在出行、航海等活动中，需要辨别方向，最初人们依靠观测太阳、星星等自然现象来确定方向，但受天气、时间等条件限制较大。战国时期，我国就已经出现了司南，它是用天然磁石琢磨成勺形，放在光滑的地盘上，利用磁石指南的特性来辨别方向，但司南存在准确性欠佳、使用不太方便等问题。后来，经过不断改进，出现了指南鱼、指南针等更实用的指向工具。指南针以磁针为主要部件，通过磁化的磁针在地磁场的作用下能准确地指示南北方向，并且在制作工艺和便携性等方面都有很大提升。</span>
+            <h3>制作工艺特点：</h3>
+            <span style="text-indent:initial 2em">例如指南鱼的制作，是将薄铁片剪成鱼形，通过加热后用特定的方法（如放在地磁场上等）使其磁化，制成可以指示方向的工具。指南针则在磁针的选材、形状以及安装方式等方面不断优化，有的磁针被安装在罗盘上，配合刻度盘等部件，能更精准地指示方向，并且方便携带和使用，能适应不同的航海、旅行等环境需求。</span>
+            <h3>对世界的影响：</h3>
+            <span style="text-indent:initial 2em">指南针在航海领域的应用极大地推动了航海事业的发展，让航海者们能够在茫茫大海上更准确地确定航向，不再像以前那样容易迷失方向，从而开启了远洋航海的新时代。它促进了中外海上贸易、文化交流以及地理大发现等重要历史进程，使得世界各国之间的联系更加紧密，加速了全球化的早期进程，对世界历史的发展轨迹产生了不可估量的影响。</span>
+        `
+        break
+      case 2:
+      main.innerHTML = `
+            <h1>造纸术</h1>
+            <h3>发明背景与发展历程：</h3>
+            <span style="text-indent:initial 2em">在造纸术发明之前，人们记录信息主要依靠竹简、丝绸等材料。竹简过于笨重，不便携带和大量书写；丝绸虽轻便但成本高昂，难以普及。西汉时期，已经出现了用麻做原料的纸，但质地粗糙，不太适宜书写。到了东汉时期，蔡伦改进了造纸术，他选用树皮、破布、麻头和旧渔网等为原料，经过挫、捣、炒、烘等工艺，制造出了质地细腻、便于书写且成本较低的纸张，这种造纸方法很快得到推广，被称为 “蔡侯纸”。</span>
+            <h3>制作工艺特点：</h3>
+            <span style="text-indent:initial 2em">其制作过程较为复杂且讲究。先是原料的收集与初步处理，比如将树皮剥下、旧麻织物洗净等；接着通过舂捣等方式把原料打碎成纤维状，使其更易交织成纸；之后加水搅拌形成均匀的纸浆悬浮液，再用竹帘等工具从纸浆中舀取，使纸浆均匀附着在竹帘上，沥干水分后揭下就初步形成了纸张，最后经过晾晒或烘烤等干燥处理，让纸张变得平整且易于保存。</span>
+            <h3>对世界的影响：</h3>
+            <span style="text-indent:initial 2em">造纸术的出现和传播改变了信息记录和传播的方式，使得知识能够以更加轻便、低成本的载体进行传承和扩散。它传入日本、欧洲等地后，取代了欧洲羊皮等昂贵的书写材料，大大推动了文化的传播、教育的发展以及学术的繁荣，为文艺复兴等重要历史文化运动奠定了基础，促进了人类文明的进步。</span>
+        `
+        break
+      case 3:
+      main.innerHTML = `
+            <h1>火药</h1>
+            <h3>发明背景与发展历程：</h3>
+            <span style="text-indent:initial 2em">古代炼丹家们在炼制丹药的过程中，偶然发现了硝石、硫磺和木炭混合在一起后，点燃会发生剧烈燃烧甚至爆炸的现象，经过不断的尝试和配方改进，逐渐掌握了火药的制作方法。唐朝时期，火药已经开始应用于军事领域，出现了诸如火箭（将火药绑在箭头上，点燃后借助火药燃烧的反作用力射向敌人）等简单的火药武器。到了宋代，火药武器发展更为多样，有火炮、突火枪等，制作工艺也更为复杂和成熟。</span>
+            <h3>制作工艺特点：</h3>
+            <span style="text-indent:initial 2em">火药的制作关键在于原料的选取和配比，硝石的纯度、硫磺的质地以及木炭的种类等都会影响火药的性能。要精确地按照一定比例将硝石、硫磺、木炭混合研磨成细粉，并且在混合过程中要注意防潮等因素，保证火药能稳定地储存和使用。不同用途的火药（如用于发射的、用于爆炸的等）其配方还会略有差异，需要根据实际情况进行调整。</span>
+            <h3>对世界的影响：</h3>
+            <span style="text-indent:initial 2em">火药传入阿拉伯地区和欧洲后，彻底改变了战争的形式和军事战略格局，使得冷兵器时代逐渐向火器时代过渡。火药武器的出现让战争的杀伤力和破坏力大幅提升，城堡等防御工事不再像以前那样坚不可摧，推动了军事技术的变革。同时，火药在民用方面，如开山采矿等领域也发挥了巨大作用，促进了工业生产等方面的发展。</span>
+        `
+        break
+      case 4:
+      main.innerHTML = `
+            <h1>印刷术（活字印刷术）</h1>
+            <h3>发明背景与发展历程：</h3>
+            <span style="text-indent:initial 2em">印刷术出现之前，书籍的复制靠人工抄写，效率极低且容易出错。隋唐时期，我国出现了雕版印刷术，即将文字或图案雕刻在木板上，刷墨后进行印刷。但雕版印刷存在刻板费工费时、一旦出错不易修改等缺点。北宋时期，毕昇发明了活字印刷术，他用胶泥做成一个个单字的活字，按照稿件把活字排列在铁板上，加热铁板使松脂等黏合剂熔化，将活字固定后便可印刷，印完后再加热取下活字，可重复使用。后来，活字印刷术在材料等方面不断改进，如火药活字、铜活字等陆续出现。</span>
+            <h3>制作工艺特点：</h3>
+            <span style="text-indent:initial 2em">活字印刷关键在于活字的制作，像胶泥活字需要精心雕刻出一个个反体单字，确保字迹清晰、大小均匀，还要考虑活字的干燥、硬度等因素，使其能承受多次印刷的压力和摩擦。排版时，要依照文稿内容准确地排列活字顺序，并且掌握好固定活字的火候等技术要点，保证印刷过程中活字不松动、移位，从而印出清晰准确的内容。</span>
+            <h3>对世界的影响：</h3>
+            <span style="text-indent:initial 2em">活字印刷术极大地提高了书籍复制的效率，降低了书籍成本，使得知识能够更快速、广泛地传播。它传入欧洲后，改变了欧洲的书写方式，加速了知识的传播速度，打破了教会对学术的垄断，推动了欧洲文艺复兴、宗教改革等思想文化运动的开展，促进了欧洲文化的繁荣和科学技术的发展，为近现代文明的兴起奠定了重要基础。</span>
+        `
+        break
+    }
+  }
+  </script>
+</html>
